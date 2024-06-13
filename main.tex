@@ -1,0 +1,96 @@
+\documentclass{cv}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={5.3in, 10in}, top=2cm]{geometry}		% width=5.3in, height=10in, top margin=2cm on each page
+\usepackage[document]{ragged2e}
+
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{xcolor}
+\definecolor{highlight}{HTML}{283559}
+\definecolor{link}{HTML}{5C6273}
+
+\usepackage[								% coloring of links
+	colorlinks = true,
+	linkcolor = highlight,
+	urlcolor = highlight,
+	citecolor= highlight
+]{hyperref}
+
+\newcommand{\highlight}[1]{\textcolor{highlight}{\textbf{#1}}}		% highlight text as bold and with the highlight color defined above
+\newcommand{\ec}{\textsuperscript{\textdagger}}								% Equal contribution dagger% define the header and (not) footer %
+
+\usepackage{enumitem}
+\let\olditem\item
+\renewcommand\item{\olditem\justifying}
+
+\usepackage{fancyhdr}																		  
+\fancyhf{}
+\rhead{Curriculum Vit\ae}
+\lhead{Francisco Mart\'inez L\'opez}
+\rfoot{Page \thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+\thispagestyle{empty}					% Turn off header and footer for the first page
+\pagestyle{fancy}			 		% For the rest of the pages switch to the fancy page style defined just above the document begin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% TITLE %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{-0.50cm}
+\centering 
+\input{title.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% EDUCATION %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{0.25cm}
+\section{Education}
+\input{education.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% TEACHING %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{0.25cm}
+\section{Teaching experience}
+\input{teaching.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% CONFERENCES %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{0.25cm}
+\section{Conferences and schools}
+\input{conferences.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% PUBLICATIONS %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{0.25cm}
+\section{Selected publications}
+\input{publications.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% OUTREACH %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{0.25cm}
+\section{Outreach}
+\input{outreach.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% SKILLS %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{0.25cm}
+\section{Personal skills}
+\input{skills.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% REFERENCES %%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace*{0.25cm}
+\section{References}
+\input{references.tex}
+
+\end{document}
