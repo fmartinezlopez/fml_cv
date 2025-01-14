@@ -21,8 +21,16 @@
 %% define the \datedsubsection command
 \newcommand{\datedsubsection}[4]{%	
 \cvsubsection[#2]{#3 \hfill \small{\textlf{\scshape{#2}}}}%
+%\cvsubsection[#2]{
+%    \begin{multicols}{2}
+%        #3
+%        \vfill\null
+%        \columnbreak
+%        \hfill \small{\textlf{\scshape{#2}}}
+%    \end{multicols}}
+%\vspace*{-1.2cm}
 \begin{minipage}{5cm}
-    \vspace*{-.7ex}\hspace*{-3cm}\footnotesize #1
+    \vspace*{-0.7ex}\hspace*{-3cm}\footnotesize #1
 \end{minipage}
 \raggedright
     
